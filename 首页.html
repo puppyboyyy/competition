@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>香水主题</title>
+<link type="text/css" rel="stylesheet" href="css/main.css" />
+<script language="javascript" type="text/javascript" src="js/jquery.js"></script>
+<style type="text/css">
+.flash { width:100%; height:530px; position:relative;border-bottom:1px solid #edeeef;}
+.flash .con li { width:100%; height:530px; position:absolute; top:0; left:0;}
+.flash .but { width:100px; position:absolute; top:500px; left:48.5%; z-index:222;}
+.flash .but li { width:13px; height:13px; display:inline-block; background:url(images/dot.png) -13px 0 no-repeat; float:left; margin-right:5px; }
+.flash .but li.current { background:url(images/dot.png) 0 0 no-repeat; margin-right:5px;}
+a:hover {
+	color: #800F0F;
+}
+</style>
+</head>
+<body>
+    <div class="tip">
+    	<div class="logo">
+        	<img src="images/logo.png" width="60" height="60"/>
+        </div>
+		<div class="search">
+		<dl>
+		  <form id="search-form" action="首页.html" method="get">
+		    <dt><input type="text" class="txt_search" name="q" placeholder="输入关键词进行查询"></dt>
+		    <dd><input type="submit" class="btn_search" value="搜索"></dd>
+		  </form>
+		</dl>
+		</div>
+	</div>
+    <div class="menu">
+		<div class="m_menu">
+			<ul>
+            	<li><a href="首页.html" target="_parent">首页</a></li>
+            	<li><a href="香奈儿.html" target="_parent">香奈儿</a></li>
+            	<li><a href="祖玛珑.html" target="_parent">祖玛珑</a></li>
+            	<li><a href="登录.html" target="_parent">登录注册</a></li>
+			</ul>
+		</div>
+    </div>
+    <div class="flash">
+    	<ul class="con">
+        	<li style="background:url(images/首页1.jpg) center no-repeat; z-index:11;"></li>
+            <li style="background:url(images/首页2.jpg) center no-repeat;"></li>
+            <li style="background:url(images/首页3.jpg) center no-repeat;"></li>
+        </ul>
+        <!--按钮开始-->
+        <ul class="but">
+        	<li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <!--按钮结束-->
+    </div>
+<script type="text/javascript">
+	var index=0;
+	var playCount=null;
+	
+	$(".but li").hover(function(){
+		clearInterval(playCount);
+		$(this).addClass("current").siblings().removeClass("current");
+		index = $(this).index();
+		$(".con li").eq(index).fadeIn().siblings().fadeOut();	
+	}).mouseout(function(){
+		auto_play();
+	});
+	function auto_play(){
+		playCount=setInterval(function(){
+			index++;
+			if(index > 3){index=0;}
+			$(".but li").eq(index).addClass("current").siblings().removeClass("current");	
+			$(".con li").eq(index).fadeIn().siblings().fadeOut();
+		},3000);
+		
+	};
+	
+	auto_play();
+	
+</script>
+	
+	<div class="main">
+    	<div class="jianj">
+			<div class="mi">
+				<div class="mi_title" >香水历史<span class="eng">Perfume History</span></div> 
+        	</div>
+            <div class="j_main">
+            	<div class="j_txt">
+				<br>
+               <p>香水是一种源远流长的美容用品，其历史可以追溯至古埃及和古罗马时期。在古代，香水的主要作用是用来祭祀神灵和作为礼物馈赠给贵族和王室。然而，随着时间的推移，香水不仅仅是一种宗教和社交符号，也成为了一种美容和个人护理的必备品。</P>
+               <p>在中世纪欧洲，香水的制作技术逐渐传入，并在法国和意大利等国家得到广泛发展。香水逐渐成为欧洲贵族的标志，特别是在法国宫廷中，香水被视为一种高雅的品味和文化象征。法国国王路易十四更是将香水视为一种奢侈品，他经常使用大量的香水来彰显自己的统治地位。</P>
+               <p>19世纪是香水发展的重要时期，随着工业化和化学技术的发展，香水的制作成为了一门艺术和科学。香水中添加的精油和化学成分也不断改进，使香水的味道更加复杂和持久。同时，香水的制作也变得更加规范和标准化，使得不同品牌的香水味道保持一致性和品质稳定性。</P>
+               <p>到了20世纪，香水已经成为了一种全球性的产业，有许多知名的香水品牌在世界范围内拥有着广泛的市场。同时，香水的使用也从最初的贵族和王室逐渐普及到普通人群中。香水不仅仅是一种美容和个人护理用品，也是一种表达个人风格和个性的方式。</P>
+			   <p>总的来说，香水作为一种源远流长的美容用品，经历了数千年的发展和演变。从古代的祭祀和礼物到现代的奢侈品和流行文化符号，香水一直在发挥着不同的作用。而随着科技和文化的不断发展，香水的历史也在不断演绎着新的篇章。</P>
+				</div>
+                <div class="j_img">
+                	<img src="images/首页4.jpg" width="385" height="285"/>
+                </div>
+            </div>
+        </div>
+		<div class="jianj">
+			<div class="mi">
+				<div class="mi_title" >香水小知识<span class="eng">Fragrance Trivia</span></div> 
+			</div>
+		    <div class="j_main">
+		    	<div class="j_txt">
+				<br>
+				<h3>香水制作的工艺和技术</h3>
+				<p>香水的制作是一门融合了科学和艺术的技艺。首先，需要选择不同的香料，精心搭配并混合成一个复杂的香调。随后，将香调和一定比例的酒精混合，然后进行精细的过滤和陈放，最终形成一款独特的香水。这个制作过程需要考虑到许多因素，如香料的质量和比例，酒精的纯度和混合比例，以及过滤和陈放的时间和方式等。</p>
+				<h3>香调和香型的区别</h3>
+				<p>在香水制作中，香调和香型是两个重要的概念。香调指的是由若干种不同香料混合而成的香味组合，例如花香调、果香调等。香型则是根据香调的基础之上，再加入一些额外的香料来进一步调整香味的特性，例如甜香型、辛辣香型等。在制作香水时，不同的香调和香型可以搭配使用，从而创造出独特的香味。</p>
+				<h3>香水储存和使用的技巧</h3>
+				<p>香水在储存和使用时需要注意一些技巧，以保证其品质和香味。首先，香水应该储存在阴凉、干燥、避光的地方，远离阳光和热源。其次，使用香水前应该清洁皮肤并保持皮肤干燥，这样可以帮助香水更好地吸收和散发香味。最后，使用香水时应该注意使用量的适度，不要过量使用，以免引起不适或浪费香水。</p>
+				<p>制作一瓶优质的香水需要经过精细的工艺和技术，搭配合适的香调和香型，并遵循正确的储存和使用技巧。香水不仅仅是一种美容和个人护理用品，也是一种表达个人风格和个性的方式。</p>
+				</div>
+				<div class="j_img">
+					<img src="images/首页4.jpg" width="385" height="285"/>
+				</div>
+				</div>
+		    </div>
+		</div>
+		<div class="jianj">
+			<div class="mi">
+				<div class="mi_title" >香水使用指南<span class="eng">Fragrance Guide</span></div> 
+			</div>
+		    <div class="j_main">
+		    	<div class="j_txt">
+				<br>
+				<p>香水是一种独特的美容产品，不仅可以让你闻起来更加迷人，还可以增强自信和吸引力。然而，正确的使用方法和储存技巧对于达到最佳效果至关重要。下面是一些关于香水的使用指南和技巧，帮助你让香水更加持久和有效。</p>
+				<h3>选择适合自己的香水</h3>
+				<p>首先，选择适合自己的香水是至关重要的。每个人的皮肤和气味都是独特的，不同的香水味道也会在每个人身上产生不同的效果。选择香水时，应该选择适合自己的香味。可以尝试不同的香水，找到最适合自己的那一款。</p>
+				<h3>正确使用香水</h3>
+				<p>在使用香水之前，应该将身体清洁干净。可以使用沐浴露和身体乳液帮助固定香水的持久时间。在使用香水时，应该将香水喷在脉搏处，如颈部、手腕、肘关节和胸部。这些部位的血液循环较好，可以帮助扩散香水的味道。</p>
+				<h3>让香水更持久</h3>
+				<p>要让香水更持久，可以选择某些品牌的沐浴露和身体乳液与香水搭配使用。同时，喷香水时应该离皮肤约20cm距离，并在喷完香水后将手腕轻轻搓动，这样可以帮助加热香水，释放更多的味道。</p>
+				<h3>注意事项</h3>
+				<p>香水虽然让你更加迷人，但如果使用不当，可能会带来一些不良影响。例如，在某些场合下使用香水会造成不适，如在医院、办公室、飞机和其他拥挤的地方。因此，在使用香水时需要适当控制使用量，以免影响他人。此外，也要注意香水与阳光和高温的接触，以免改变香水的味道和质量。</p>
+				<p>总之，香水是一种让你更加迷人的美容产品，正确的使用方法和储存技巧对于达到最佳效果至关重要。选择适合自己的香水，正确使用香水，让香水更持久，注意事项，这些都是使用香水的必须要知道的要点。</p>
+				</div>
+				<div class="j_img">
+					<img src="images/首页4.jpg" width="385" height="285"/>
+				</div>
+				</div>
+		    </div>
+		</div>
+		<div class="jianj">
+			<div class="mi">
+				<div class="mi_title" >香水搭配建议<span class="eng">Fragrance Pairing Tips</span></div> 
+			</div>
+		    <div class="j_main">
+		    	<div class="j_txt">
+				<br>
+				<p>香水是一种非常私人化的东西，它能够反映出我们的个性、情感和风格。正确的香水搭配不仅能够增添我们的魅力，还能够使我们在不同场合和季节更加舒适和自信。下面是一些香水搭配建议，希望能够帮助你更好地选择和使用香水。</p>
+				<h3>根据场合选择香水</h3>
+				<p>不同场合需要不同的香水，例如正式场合需要更为清淡和稳重的香气，而休闲场合可以选择更为轻松和活泼的香气。在选择香水时，要考虑到所处的场合和自己的气质，以便选出最合适的香水。</p>
+				<h3>香水与服装的搭配</h3>
+				<p>香水和服装的搭配同样非常重要，它们之间的协调能够让你更加迷人。如果穿着轻盈的衣服，可以选择花香型或果香型的香水，如果穿着成熟稳重的衣服，则可以选择木质香型或香草香型的香水。</p>
+				<h3>香水与化妆品的搭配</h3>
+				<p>香水和化妆品的搭配也需要注意，不同的香水和化妆品之间存在相互影响的可能。例如，如果使用了口红和香水，可以选择香调相似的口红和香水，这样可以更好地协调。</p>
+				<h3>香水的层叠使用</h3>
+				<p>层叠使用香水是一种让香气更持久的方法，可以将不同类型的香水一起使用。一般来说，可以先使用清淡的香水，再使用浓郁的香水，这样可以让香气更加持久。</p>
+				<p>总之，香水搭配需要根据不同的场合和气质进行选择，同时需要注意香水和服装、化妆品之间的协调。层叠使用香水是一种让香气更持久的方法。希望这些香水搭配建议能够帮助你更好地选择和使用香水。</p>
+				</div>
+				<div class="j_img">
+					<img src="images/首页4.jpg" width="385" height="285"/>
+				</div>
+				</div>
+		    </div>
+		</div>
+    	<div class="mi">
+        	<div class="mi_title">那些经典的香水<span class="eng">Those Classic Perfumes</span></div> 
+            <div class="xin">
+              <div class="x_con">
+                	<dl class="pad_13">
+						<dt>
+							<a href="https://www.chanel.cn/zh_CN/fragrance-beauty/fragrance/p/women/n_5.html" target="_parent"><img src="images/香奈儿5号.jpg" width="290" height="230" alt=""/></a>
+                        </dt>
+                        <dd>香奈儿5号</dd>
+                    </dl>
+                    <dl class="pad_13">
+						<dt>
+							<a href="https://www.lancome.com.cn/l3_fragrance_women_miracle/" target="_parent"><img src="images/兰蔻奇迹香水.jpg" width="290" height="230" alt=""/></a>
+                        </dt>
+                        <dd>兰蔻奇迹之水</dd>
+                    </dl>
+                    <dl class="pad_13">
+						<dt>
+							<a href="https://www.esteelauder.com.cn/product/571/2094/product-catalog/pleasure" target="_parent"><img src="images/雅诗兰黛欢沁香水.jpg" width="290" height="230" alt=""/></a>
+                        </dt>
+                        <dd>雅思兰黛欢沁香水</dd>
+                    </dl>
+                    <dl>
+						<dt>
+							<a href="https://www.elizabetharden.hk/" target="_parent"><img src="images/雅顿白钻.jpg" width="290" height="230" alt=""/></a>
+                        </dt>
+                        <dd>雅顿白钻香水</dd>
+                    </dl>
+                </div>
+                <div class="x_con">
+                	<dl class="pad_13">
+						<dt>
+							<a href="https://www.chanel.cn/zh_CN/fragrance-beauty/fragrance/p/women/allure/allure-eau-de-parfum-spray-p112430.html#skuid-0112430" target="_parent"><img src="images/香奈儿魅力女士.jpg" width="290" height="230" alt=""/></a>
+                        </dt>
+                        <dd>香奈儿魅力女士</dd>
+                  </dl>
+                    <dl class="pad_13">
+						<dt>
+							<a href="https://www.yslbeautycn.com/item/00086YSL-001" target="_parent"><img src="images/圣罗兰“黑鸦片”.jpg" width="290" height="230" alt=""/></a>
+                        </dt>
+                        <dd>圣罗兰"黑鸦片"</dd>
+                    </dl>
+                    <dl class="pad_13">
+						<dt>
+							<a href="https://www.gucci.com/hk/en_gb/" target="_parent"><img src="images/古驰“嫉妒我”.jpg" width="290" height="230" alt=""/></a>
+                      </dt>
+                        <dd>古驰"嫉妒我"</dd>
+                  </dl>
+                    <dl>
+						<dt>
+							<a href="https://www.calvinklein.us/en/men/fragrance/fragrance/eternity-eau-de-parfum-for-men/44014552-000.html?journey=searchResultPage" target="_parent"><img src="images/克莱恩1号.png" width="290" height="230" alt=""/></a>
+                        </dt>
+                        <dd>克莱恩1号</dd>
+                    </dl>
+              </div>
+            </div>
+    	</div>
+        <div class="jy"></div>     
+    </div>
+    <div class="footer">
+    	<div class="foo_main">© 2023 Powered By Hailey</div>
+    </div>
+</body>
+</html>
